@@ -1,0 +1,85 @@
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #f1f3f4;
+}
+
+.container {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.search {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  cursor: pointer;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  word-break: break-word;
+}
+
+.table tr:hover {
+  background-color: var(--secondary-color);
+}
+
+.profit {
+  color: green;
+}
+
+.loss {
+  color: red;
+}
+
+/* Responsive: stack into blocks */
+@media (max-width: 600px) {
+  .table,
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  .table th {
+    display: none;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  .table td::before {
+    font-weight: bold;
+    content: attr(data-label);
+  }
+}
