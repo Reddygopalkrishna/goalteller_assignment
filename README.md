@@ -66,15 +66,6 @@ src/
 ✅ Evaluation Checklist
 
 
- API integration
-
- Table with calculations (Total Value, P/L%)
-
- Sorting by columns
-
- Search filter
-
- Responsive layout
 
  CSS variables + hover styles
 
