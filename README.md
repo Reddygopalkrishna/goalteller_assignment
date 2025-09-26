@@ -1,74 +1,55 @@
 
+---
 
-## 🚀 Features
+## 🛠️ How to Run the Project
 
-- Fetches live mock portfolio data from API:
-https://raw.githubusercontent.com/aashishsingla567/gt-takehome/refs/heads/main/portfolios.json
+1. Clone the repository  
+   git clone https://github.com/Reddygopalkrishna/goalteller_assignment.git  
+   cd goalteller-portfolio  
 
+2. Install dependencies  
+   npm install  
 
-- Displays a responsive asset table with:
-- Symbol
-- Quantity
-- Average Price
-- Current Price
-- Total Value (quantity × currentPrice)
-- P/L % ((currentPrice − avgPrice)/avgPrice × 100)
-- Sorting by clicking on any column header.
-- Search box to filter assets by symbol (case-insensitive).
-- Responsive design:
-- Multi-column layout on desktop
-- Single-column stacked layout on mobile
-- Styled with **CSS Modules**:
-- Uses CSS custom properties for primary/secondary colors
-- Hover effect on rows
-- Accessibility:
-- Semantic HTML
-- `role="table"` and ARIA attributes
-- Keyboard focus styles
+3. Run in development mode  
+   npm run dev  
+   This will start the Vite development server (usually at http://localhost:5173).  
+
+4. Build for production  
+   npm run build  
+
+5. Preview the production build  
+   npm run preview  
 
 ---
 
-## 📦 Tech Stack
+## 📂 Project Structure
 
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/) (bundler + dev server)
-- [CSS Modules](https://github.com/css-modules/css-modules)
+src/  
+├── components/  
+│   ├── PortfolioSummary.tsx        # Main portfolio component  
+│   ├── PortfolioSummary.module.css # Styles (CSS Modules)  
+├── App.tsx                         # Renders PortfolioSummary  
+├── main.tsx                        # Entry point  
 
 ---
 
-## 🛠️ Setup & Run Instructions
+## ✅ Features Implemented
 
-Clone the repo and install dependencies:
+- Fetches portfolio data from mock API  
+- Displays assets with calculations (Total Value, P/L %)  
+- Sorting by clicking column headers  
+- Search filter by symbol (case-insensitive)  
+- Responsive design:  
+  - Multi-column layout on desktop  
+  - Single-column stacked layout on mobile  
+- Styled using CSS Modules + CSS custom properties  
+- Hover effect on rows  
+- Accessibility:  
+  - Semantic HTML  
+  - ARIA roles for table  
+  - Keyboard focus styles  
+- **Optional Bonus**: Asset allocation chart (Recharts)  
 
-```
-git clone <your-repo-url>
-cd goalteller-portfolio
-npm install
-npm run dev
-Then open the local dev server (usually http://localhost:5173).
-
-To build for production:
-
-
-npm run build
-npm run preview
-
-
-📂 Project Structure
-
-src/
-├── components/
-│   ├── PortfolioSummary.tsx        # Main component
-│   ├── PortfolioSummary.module.css # Styles (CSS Modules)
-├── App.tsx                         # Renders the component
-├── main.tsx                        # Entry point
-✅ Evaluation Checklist
-
-
-
- CSS variables + hover styles
-
- Accessibility (semantic roles, keyboard support)
+---
 
 
